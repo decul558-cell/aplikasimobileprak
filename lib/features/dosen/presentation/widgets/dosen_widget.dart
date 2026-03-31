@@ -8,11 +8,11 @@ class DosenListView extends StatelessWidget {
   final bool useModernCard;
 
   const DosenListView({
-    Key? key,
+    super.key,
     required this.dosenList,
     this.onRefresh,
     this.useModernCard = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class DosenListView extends StatelessWidget {
 
 class DosenEmptyState extends StatelessWidget {
   final VoidCallback? onRefresh;
-  const DosenEmptyState({Key? key, this.onRefresh}) : super(key: key);
+  const DosenEmptyState({super.key, this.onRefresh});
 
   @override
   Widget build(BuildContext context) {
@@ -102,11 +102,11 @@ class ModernDosenCard extends StatefulWidget {
   final List<Color>? gradientColors;
 
   const ModernDosenCard({
-    Key? key,
+    super.key,
     required this.dosen,
     this.onTap,
     this.gradientColors,
-  }) : super(key: key);
+  });
 
   @override
   State<ModernDosenCard> createState() => _ModernDosenCardState();
@@ -225,7 +225,7 @@ class DosenCard extends StatelessWidget {
   final DosenModel dosen;
   final VoidCallback? onTap;
 
-  const DosenCard({Key? key, required this.dosen, this.onTap}) : super(key: key);
+  const DosenCard({super.key, required this.dosen, this.onTap});
 
   @override
   Widget build(BuildContext context) {

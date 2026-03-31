@@ -10,7 +10,7 @@ import '../../../dosen/presentation/pages/dosen_page.dart';
 import '../../../profile/presentation/pages/profile_page.dart';
 
 class DashboardPage extends ConsumerWidget {
-  const DashboardPage({Key? key}) : super(key: key);
+  const DashboardPage({super.key});
 
   IconData _getIconForStat(String title) {
     switch (title) {

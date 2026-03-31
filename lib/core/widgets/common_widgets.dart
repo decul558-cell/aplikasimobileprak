@@ -4,7 +4,7 @@ import '../theme/app_theme.dart';
 
 // Loading Widget
 class LoadingWidget extends StatelessWidget {
-  const LoadingWidget({Key? key}) : super(key: key);
+  const LoadingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +18,10 @@ class CustomErrorWidget extends StatelessWidget {
   final VoidCallback? onRetry;
 
   const CustomErrorWidget({
-    Key? key,
+    super.key,
     required this.message,
     this.onRetry,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +59,10 @@ class EmptyWidget extends StatelessWidget {
   final IconData? icon;
 
   const EmptyWidget({
-    Key? key,
+    super.key,
     required this.message,
     this.icon = Icons.inbox,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -90,11 +90,11 @@ class CustomCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   const CustomCard({
-    Key? key,
+    super.key,
     required this.child,
     this.padding,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

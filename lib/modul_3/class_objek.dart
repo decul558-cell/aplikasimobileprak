@@ -48,12 +48,12 @@ class MahasiswaAktif extends MahasiswaBase {
   String? statusBeasiswa;
 
   MahasiswaAktif({
-    String? nama,
-    int? nim,
-    String? jurusan,
+    super.nama,
+    super.nim,
+    super.jurusan,
     this.semester,
     this.statusBeasiswa,
-  }) : super(nama: nama, nim: nim, jurusan: jurusan);
+  });
 
   @override
   void tampilkanData() {
@@ -72,12 +72,12 @@ class MahasiswaAlumni extends MahasiswaBase {
   String? tempatKerja;
 
   MahasiswaAlumni({
-    String? nama,
-    int? nim,
-    String? jurusan,
+    super.nama,
+    super.nim,
+    super.jurusan,
     this.tahunLulus,
     this.tempatKerja,
-  }) : super(nama: nama, nim: nim, jurusan: jurusan);
+  });
 
   @override
   void tampilkanData() {
@@ -117,14 +117,14 @@ class Dosen extends MahasiswaBase
   String? jabatan;
 
   Dosen({
-    String? nama,
-    int? nim,
-    String? jurusan,
+    super.nama,
+    super.nim,
+    super.jurusan,
     this.nip,
     this.jabatan,
     String mataPelajaran = "Umum",
     String topikPenelitian = "Teknologi Informasi",
-  }) : super(nama: nama, nim: nim, jurusan: jurusan) {
+  }) {
     this.mataPelajaran = mataPelajaran;
     this.topikPenelitian = topikPenelitian;
   }
@@ -145,9 +145,9 @@ class Fakultas extends MahasiswaBase with BisaAdministrasi, BisaMeneliti {
   Fakultas({
     this.namaFakultas,
     this.dekan,
-    String? jurusan,
+    super.jurusan,
     String topikPenelitian = "Riset Fakultas",
-  }) : super(jurusan: jurusan) {
+  }) {
     this.topikPenelitian = topikPenelitian;
   }
 

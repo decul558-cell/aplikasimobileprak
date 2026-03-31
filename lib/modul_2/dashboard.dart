@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DashboardPage(),
     );
@@ -15,11 +17,13 @@ class MyApp extends StatelessWidget {
 }
 
 class DashboardPage extends StatelessWidget {
+  const DashboardPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dashboard Mahasiswa"),
+        title: const Text("Dashboard Mahasiswa"),
         backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(
@@ -30,11 +34,11 @@ class DashboardPage extends StatelessWidget {
             // CONTAINER 1
             // =========================
             Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(20),
               width: double.infinity,
               color: Colors.blue[100],
-              child: Text(
+              child: const Text(
                 "Selamat Datang",
                 textAlign: TextAlign.center,
               ),
@@ -44,11 +48,11 @@ class DashboardPage extends StatelessWidget {
             // CONTAINER 2
             // =========================
             Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(20),
               width: double.infinity,
               color: Colors.green[100],
-              child: Text(
+              child: const Text(
                 "Sistem Informasi Mahasiswa",
                 textAlign: TextAlign.center,
               ),
@@ -61,19 +65,19 @@ class DashboardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.orange[200],
-                  child: Text("Menu 1"),
+                  child: const Text("Menu 1"),
                 ),
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.orange[300],
-                  child: Text("Menu 2"),
+                  child: const Text("Menu 2"),
                 ),
               ],
             ),
 
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
 
             // =========================
             // ROW 2
@@ -82,19 +86,19 @@ class DashboardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.purple[200],
-                  child: Text("Menu 3"),
+                  child: const Text("Menu 3"),
                 ),
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.purple[300],
-                  child: Text("Menu 4"),
+                  child: const Text("Menu 4"),
                 ),
               ],
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // =========================
             // STACK 1
@@ -107,11 +111,11 @@ class DashboardPage extends StatelessWidget {
                   height: 100,
                   color: Colors.grey[300],
                 ),
-                Text("Stack 1"),
+                const Text("Stack 1"),
               ],
             ),
 
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
 
             // =========================
             // STACK 2
@@ -124,21 +128,21 @@ class DashboardPage extends StatelessWidget {
                   height: 100,
                   color: Colors.grey[400],
                 ),
-                Text("Stack 2"),
+                const Text("Stack 2"),
               ],
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // =========================
             // GRIDVIEW (min 2 item)
             // =========================
             Container(
               height: 200,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: GridView.count(
                 crossAxisCount: 2,
-                children: [
+                children: const [
                   Card(
                     child: Center(child: Text("Grid 1")),
                   ),
@@ -149,15 +153,15 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // =========================
             // LISTVIEW (min 2 item)
             // =========================
-            Container(
+            SizedBox(
               height: 150,
               child: ListView(
-                children: [
+                children: const [
                   ListTile(
                     leading: Icon(Icons.person),
                     title: Text("Andi"),
@@ -170,7 +174,7 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // =========================
             // COLUMN 2 (Column di dalam Column)
@@ -178,19 +182,19 @@ class DashboardPage extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.teal[100],
-                  child: Text("Column Kedua - 1"),
+                  child: const Text("Column Kedua - 1"),
                 ),
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Colors.teal[200],
-                  child: Text("Column Kedua - 2"),
+                  child: const Text("Column Kedua - 2"),
                 ),
               ],
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
